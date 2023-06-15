@@ -1,9 +1,10 @@
 body {
-    background-color: cornflowerblue;
+    background-color: rgb(4, 52, 141);
 }
 
-h1,h2,h3,h4,h5 {
-    font-family:Arial, Helvetica, sans-serif
+p,h1,h2,h3,h4,h5 {
+    font-family:Arial, Helvetica, sans-serif;
+    color:white;
 }
 
 h2 {
@@ -29,13 +30,15 @@ img {
   }
 
   #grid > div {
-    background-color: hotpink;
+    background-color: rgb(58, 3, 102);;
     padding: 10px;
   }
 
   .grid {
     display:grid;
-    background-color:hotpink;
+    background-color:rgb(58, 3, 102);;
+    border-radius: 10px;
+    width:90%
   }
 
 input {
@@ -51,13 +54,15 @@ input {
 }
 
 #grids > div {
-    background-color: hotpink;
+    background-color: rgb(58, 3, 102);
     padding: 10px;
+    border-radius: 10px;
+
   }
 
   .grids {
     display:grid;
-    background-color:hotpink;
+    background-color:rgb(58, 3, 102);;
   }
 
 

@@ -7,7 +7,28 @@
     <title>Math Competition Training Portal</title>
     <link rel="stylesheet" href="./index.css">
     <link rel="icon" href="./favicon.ico" type="image/x-icon">
-  </head>
+    <script
+		src="https://code.jquery.com/jquery-3.4.1.js"
+		integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+		crossorigin="anonymous"></script>
+	<script>
+		function SubForm (){
+			$.ajax({
+				url:"https://api.apispreadsheets.com/data/fjwIpAMlyEWjaeSJ/",
+				type:"post",
+				data:$("#myForm").serializeArray(),
+				success: function(){
+					alert("Thanks for your submission :)")
+                    window.location.replace("index.html");
+				},
+				error: function(){
+					alert("There was an error :(")
+				}
+			});
+		}
+	</script>
+</head>
+  
   <body>
     <main>
         <center>
@@ -35,21 +56,23 @@
     <img src="./problems/p1.png" alt="Italian Trulli">
     </center>
     <br><br>
-    <div class="grid">
+    <center>
+            <div class="grid">
     
         <center>
         <form id="myForm">
 
         <h3>Full Name:</h3>
-        <input name="Day:" ><br>
+        <input name="Person:" ><br>
 
         <h3>Your Solution</h3>
-        <input name="Score:"><br><br>        
+        <input name="Solution:"><br><br>        
       </form> 
-        <button onclick="SubForm()">Submit</button>
+       <button onclick="SubForm()">Submit</button> 
       <br><br> 
     </center>
     </div>
+    </center>
     </main>
     <script>
         
@@ -83,24 +106,6 @@ function updateTimer() {
 }
     </script>
 
-<script
-src="https://code.jquery.com/jquery-3.4.1.js"
-integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
-crossorigin="anonymous"></script>
-<script>
-function SubForm (){
-    $.ajax({
-        url:"https://api.apispreadsheets.com/data/fjwIpAMlyEWjaeSJ/",
-        type:"post",
-        data:$("#myForm").serializeArray(),
-        success: function(){
-            alert("Form Data Submitted :)")
-        },
-        error: function(){
-            alert("There was an error :(")
-        }
-    });
-}
-</script>
+
 
 </html>
