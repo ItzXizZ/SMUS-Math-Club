@@ -1,0 +1,72 @@
+body {
+    background-color: cornflowerblue;
+}
+
+h1,h2,h3,h4,h5 {
+    font-family:Arial, Helvetica, sans-serif
+}
+
+h2 {
+    font-family:Arial, Helvetica, sans-serif
+}
+
+p {
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+img {
+    border-radius: 5px;
+}
+
+.container {
+    padding:10px;
+}
+
+#grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+  }
+
+  #grid > div {
+    background-color: hotpink;
+    padding: 10px;
+  }
+
+  .grid {
+    display:grid;
+    background-color:hotpink;
+  }
+
+input {
+    width:50%;
+    height:30px;
+    border-radius:10px;
+}
+
+#grids {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+}
+
+#grids > div {
+    background-color: hotpink;
+    padding: 10px;
+  }
+
+  .grids {
+    display:grid;
+    background-color:hotpink;
+  }
+
+
+button {
+    width: 100px;
+    height:30px;
+    border-radius:5px;
+}
+
+.cringe{
+    width:50px;
+}

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Math Competition Training Portal</title>
+    <link rel="stylesheet" href="./index.css">
+    <link rel="icon" href="./favicon.ico" type="image/x-icon">
+  </head>
+  <body>
+    <main>
+        <center>
+
+            <div class="grid">
+        <table>
+            <tr>
+                <td>
+                    <h1>‎ ‎ </h1>
+                </td>
+                <td>
+                    <h1>SMUS Daily Problem</h1>  <h3 id="time"></h3>
+                </td>
+                <td>
+                    <a href="index.html"><img class="cringe" src="25694.png"></a>
+    
+                </td>
+            </tr>
+        </table>
+        
+            </div>
+        </center>
+<br><br>
+   <center>
+    <img src="./problems/p1.png" alt="Italian Trulli">
+    </center>
+    <br><br>
+    <div class="grid">
+    
+        <center>
+        <form id="myForm">
+
+        <h3>Full Name:</h3>
+        <input name="Day:" ><br>
+
+        <h3>Your Solution</h3>
+        <input name="Score:"><br><br>        
+      </form> 
+        <button onclick="SubForm()">Submit</button>
+      <br><br> 
+    </center>
+    </div>
+    </main>
+    <script>
+        
+var date = new Date();
+var second = date.getSeconds();
+var minute = date.getMinutes();
+var hour = date.getHours();
+var day = date.getDay();
+var month = date.getMonth();
+var year = date.getFullYear();
+
+var leftHour = 23 - hour;
+var leftMinute = 59 - minute;
+var leftSeconds = 59 - second;
+
+
+var leftTime = (leftHour * 3600) + (leftMinute * 60) + leftSeconds;
+var timer = document.getElementById('time');
+
+setInterval(updateTimer, 1000);
+
+function updateTimer() {
+    var h = Math.floor(leftTime / 3600);
+    var m = Math.floor((leftTime - (h * 3600)) / 60);
+    var s = Math.floor(leftTime % 60);
+
+    timer.innerHTML =  "You have " + h + " hours, " + m + " minutes, and " + (s+1) +
+       " seconds remaining 😱😱😱";
+
+    leftTime--;
+}
+    </script>
+
+<script
+src="https://code.jquery.com/jquery-3.4.1.js"
+integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+crossorigin="anonymous"></script>
+<script>
+function SubForm (){
+    $.ajax({
+        url:"https://api.apispreadsheets.com/data/fjwIpAMlyEWjaeSJ/",
+        type:"post",
+        data:$("#myForm").serializeArray(),
+        success: function(){
+            alert("Form Data Submitted :)")
+        },
+        error: function(){
+            alert("There was an error :(")
+        }
+    });
+}
+</script>
+
+</html>
